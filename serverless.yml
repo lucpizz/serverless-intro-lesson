@@ -1,0 +1,18 @@
+service: stuent-enrollment-serverless
+
+provider:
+  name: aws
+  runtime: python3.9
+
+plugins:
+  - serverless-python-requirements
+ 
+custom:
+  pythonRequirements:
+    dockerizePip: non-linux
+
+functions:
+  enroll_student:
+    handler: lambdas.enroll_student.main:handler
+
+
