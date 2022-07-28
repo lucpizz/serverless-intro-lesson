@@ -1,4 +1,4 @@
-service: stuent-enrollment-serverless
+service: student-enrollment-serverless
 
 provider:
   name: aws
