@@ -7,13 +7,17 @@ provider:
 
 plugins:
   - serverless-python-requirements
- 
+
+package:
+  individually: true
+
 custom:
   pythonRequirements:
     dockerizePip: non-linux
 
 functions:
   enroll_student:
-    handler: lambdas.enroll_student.main:handler
+    handler: enroll_student.main.handler
+    module: lambdas
 
 

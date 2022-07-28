@@ -1,13 +1,12 @@
 # handler.py
- 
-import numpy as np
- 
+
+
+
 def handler(event, context):
-    a = np.arange(15).reshape(3, 5)
- 
-    print("Your numpy array:")
-    print(a)
+    print(event)
+    print(context)
+
     return {
         'statusCode': 200,
-        'body': a.tolist()
+        'body': "success"
     }
